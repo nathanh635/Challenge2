@@ -1,0 +1,231 @@
+/*set global variables*/
+
+:root {
+    --bgcolour: darkcyan;
+    --accent: lightslategrey;
+}
+
+/*Set global fonts */
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/*Set header formatting*/
+
+header {
+    background-color: var(--bgcolour);
+    display: flex;
+    padding: 50px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    border-bottom: 10px solid black;
+    flex-shrink: 1;
+}
+
+/*format text within header*/
+
+h1 {
+    color: white;
+    position: absolute;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 67px;
+    margin-top: 40px;
+   top: 0;
+
+    background-color: var(--accent);
+    border-bottom: 10px solid white;
+    width: 20%;
+    left: 0px;
+}
+
+/*Set angle on nameplate*/
+
+.angle {
+    position: absolute;
+    background-color: black;
+    color: var(--bgcolour);
+    left: 24.1%;
+    transform: rotate(45deg);
+    padding: 15px;
+    width: 65px;
+    height: 35px;
+    top: 10px;
+    float: right;
+
+
+}
+
+/*Format anchor links*/
+
+a {
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/*Set nav bar formatting*/
+
+nav {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    text-align: right;
+    margin-right: 50px;
+    background-color: var(--bgcolour);
+   /* border: 3px solid white;*/
+}
+
+nav > a{
+   /* border: 3px solid white;*/
+    margin: 15px;
+}
+
+/*set formatting for background image up top*/
+
+#background{
+   z-index: -1;
+    padding-top: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+/*format lower portion of document*/
+
+.sidetitle{
+    font-size: 24px;
+    font-weight: bolder;
+    align-self: center;
+
+}
+
+aside {
+    left: 0;
+    width: 20%;
+    text-align: right;
+    background-color: lightslategray;
+}
+
+main {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    }
+
+.sidebar {
+    border-right: 10px solid white;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: darkcyan;
+    color: white;
+flex: 1 1 20%;
+border-top: 10px solid white;
+ text-align: right;
+}
+
+
+
+body {
+    background-color: lightslategray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+main > p {
+    padding: 20px;
+}
+
+.rightside {
+    width: 80%;
+    flex: 1 1 70%;
+    border-top: 10px solid white;
+}
+
+.contact {
+    padding: 20px;
+}
+
+#contact {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#resume {
+    padding-bottom: 15px;
+}
+
+/* Cards are split into two columns at 992px or smaller 
+@media (max-width: 1030px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+    main > section {
+      width: 100%;
+    }
+    .sidebar {
+    width: 100%;
+    }
+    .rightside {
+        width: 100%;
+        justify-content: center;
+    }
+*/
+
+/*Cards are split into two columns at 992px or smaller */
+@media (max-width: 1030px) {
+    h1 {
+           font-size: 3vw;
+    }
+
+  }
+
+  /*Cards are split into two columns at 992px or smaller */
+@media (max-width: 768px) {
+
+    .angle {
+        display: none;
+    }
+  }
+
+  #project {
+      width: 250px;
+  }
+
+#project:hover {
+    border-color: #66afe9;
+    box-shadow: 0 0 20px rgba(0, 139, 139, 0.7);
+    cursor: pointer;
+  }
+
+  figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  figcaption {
+      background-color: rgb(63, 63, 63);
+      color: white;
+      font-style: italic;
+      width: 250px;
+  }
+  
+ footer {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background-color: lightslategray;
+    border-top: 10px solid white;
+    width: 100%;
+}
