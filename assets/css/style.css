@@ -222,11 +222,13 @@ li:nth-child(odd) {
         text-align: center;
         flex-direction: row;
         flex-direction: column;
+        border-left: 10px solid white;
     }
 
     .rightside {
         text-align: center;
         flex-direction: column;
+        width: 100%;
     }
 
     body {
