@@ -70,6 +70,7 @@ nav {
     text-align: right;
     margin-right: 50px;
     background-color: var(--bgcolour);
+    flex: 1 1;
 }
 
 /*Format anchor links in navbar*/
@@ -80,10 +81,20 @@ nav > a{
 
 /*set formatting for background image up top*/
 
-#background{
+#background {
    z-index: -1;
     padding-top: 100px;
     width: 100%;
+}
+
+#photo {
+    z-index: 2;
+    top: -250px;
+    flex: 1 1;
+}
+
+#avatar {    
+    width: 250px;
 }
 
 /*format lower portion of document*/
@@ -91,14 +102,6 @@ nav > a{
 .sidetitle{
     font-size: 30px;
     font-weight: bolder;
-}
-
-/*NEVER USED THIS*/
-aside {
-    left: 0;
-    width: 20%;
-    text-align: right;
-    background-color: lightslategray;
 }
 
 main {
@@ -132,6 +135,8 @@ main {
     text-align: right;
 }
 
+
+
 /*Format unordered list and list elements in About Me section*/
 ul {
     text-align: left;
@@ -141,8 +146,6 @@ li:nth-child(odd) {
     background: rgb(96, 108, 121);
 }
 
-
-
 .rightside {
     width: 80%;
     flex: 1 1 70%;
@@ -151,9 +154,19 @@ li:nth-child(odd) {
 
 /*Format size of link to project page*/
 
-#project {
-      width: 250px;
+div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#projectimage1 {
+      width: 350px;
     }
+
+    #projectimage2 {
+        width: 250px;
+      } 
 
     /*added padding below resume link in main body*/
 #resume {
@@ -169,7 +182,8 @@ li:nth-child(odd) {
 
 /*Added glow when project is hovered over*/
 
-#project:hover {
+#projectimage1:hover,
+#projectimage2:hover {
     border-color: #66afe9;
     box-shadow: 0 0 20px rgba(0, 139, 139, 0.7);
     cursor: pointer;
@@ -211,7 +225,8 @@ li:nth-child(odd) {
 /*Page displays as one column at 768px or smaller   */
 @media (max-width: 768px) {
     h1 {
-           font-size: 3vw;
+           font-size: 3.5vw;
+           margin-top: 20px;
     }
 
     main {
@@ -234,6 +249,24 @@ li:nth-child(odd) {
     body {
         flex-direction: column;
     }
+
+    .contact {
+        display: block;
+        padding: 10px;
+    }
+
+    #contact {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
   }
 
 
