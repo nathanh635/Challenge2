@@ -11,6 +11,17 @@
 
 }
 
+/*Set body formatting*/
+
+body {
+    background-color: var(--accent);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
 /*Set header formatting*/
 
 header {
@@ -23,7 +34,7 @@ header {
     top: 0;
     z-index: 20;
     border-bottom: 10px solid black;
-    flex-shrink: 1;
+    flex 1 1;
 }
 
 /*format text within header*/
@@ -33,29 +44,13 @@ h1 {
     position: absolute;
     text-align: left;
     padding-left: 50px;
-    padding-right: 67px;
+    padding-right: 20px;
     margin-top: 40px;
-   top: 0;
-
+    top: 0;
+    left: 0px; 
     background-color: var(--accent);
     border-bottom: 10px solid white;
-    width: 20%;
-    left: 0px;
-}
-
-/*Set angle on nameplate*/
-
-.angle {
-    position: absolute;
-    background-color: var(--bgcolour);
-    color: var(--bgcolour);
-    left: 23.5%;
-    transform: rotate(45deg);
-    padding: 15px;
-    width: 65px;
-    height: 35px;
-    top: 10px;
-    float: right;
+    width: 28%;
 }
 
 /*Format anchor links*/
@@ -75,11 +70,11 @@ nav {
     text-align: right;
     margin-right: 50px;
     background-color: var(--bgcolour);
-   /* border: 3px solid white;*/
 }
 
+/*Format anchor links in navbar*/
+
 nav > a{
-   /* border: 3px solid white;*/
     margin: 15px;
 }
 
@@ -88,7 +83,6 @@ nav > a{
 #background{
    z-index: -1;
     padding-top: 100px;
-    text-align: center;
     width: 100%;
 }
 
@@ -97,10 +91,9 @@ nav > a{
 .sidetitle{
     font-size: 30px;
     font-weight: bolder;
-    align-self: center;
-
 }
 
+/*NEVER USED THIS*/
 aside {
     left: 0;
     width: 20%;
@@ -109,11 +102,22 @@ aside {
 }
 
 main {
-    text-align: center;
+
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap; 
     }
+
+    /*Style text in intro beneath image*/
+
+    .intro {
+        font-size: 22px;
+        font-style: oblique;
+    }
+
+    main > p {
+    padding: 10px;
+}
 
 .sidebar {
     border-right: 10px solid white;
@@ -121,11 +125,12 @@ main {
     padding-left: 30px;
     background-color: darkcyan;
     color: white;
-flex: 1 1 20%;
-border-top: 10px solid white;
- text-align: right;
+    flex: 1 1 20%;
+    border-top: 10px solid white;
+    text-align: right;
 }
 
+/*Format unordered list and list elements in About Me section*/
 ul {
     text-align: left;
 }
@@ -134,18 +139,7 @@ li:nth-child(odd) {
     background: rgb(96, 108, 121);
 }
 
-body {
-    background-color: lightslategray;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-}
 
-main > p {
-    padding: 20px;
-}
 
 .rightside {
     width: 80%;
@@ -153,29 +147,25 @@ main > p {
     border-top: 10px solid white;
 }
 
-.contact {
-    padding: 20px;
+/*Format size of link to project page*/
+
+#project {
+      width: 250px;
+    }
+
+    /*added padding below resume link in main body*/
+#resume {
+    padding-bottom: 15px;
 }
+
+/*Added padding to contact section*/
 
 #contact {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-#resume {
-    padding-bottom: 15px;
-}
-
-.intro {
-    font-size: 22px;
-    font-style: oblique;
-}
-
-
-
-  #project {
-      width: 250px;
-  }
+/*Added glow when project is hovered over*/
 
 #project:hover {
     border-color: #66afe9;
@@ -183,6 +173,7 @@ main > p {
     cursor: pointer;
   }
 
+  /*Added project image and caption as figure*/
   figure {
       display: flex;
       flex-direction: column;
@@ -197,6 +188,14 @@ main > p {
       font-style: italic;
       width: 250px;
   }
+
+/*Format contact links in Contact section*/
+  
+.contact {
+    padding: 20px;
+}
+
+/*Format footer*/
   
  footer {
     color: white;
@@ -225,30 +224,27 @@ main > p {
     }
 */
 
-  /*Hide angle once header shrinks with screen size */
-  @media (max-width: 1240px) {
-
-    .angle {
-        display: none;
-    }
-  }
  
-/*Cards are split into two columns at 992px or smaller   */
-@media (max-width: 1030px) {
+/*Page displays as one column at 768px or smaller   */
+@media (max-width: 768px) {
     h1 {
            font-size: 3vw;
     }
 
     main {
         flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
     } 
 
     .sidebar {
         text-align: center;
-        
+        flex-direction: row;
     }
+
+    .rightside {
+        text-align: center;
+        flex-direction: column;
+    }
+
 
   }
 
