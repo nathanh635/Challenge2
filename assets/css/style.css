@@ -33,7 +33,6 @@ header {
     left: 0;
     top: 0;
     z-index: 20;
-    border-bottom: 10px solid black;
     flex 1 1;
 }
 
@@ -75,26 +74,19 @@ nav {
 
 /*Format anchor links in navbar*/
 
-nav > a{
+nav > a {
     margin: 15px;
 }
 
 /*set formatting for background image up top*/
 
-#background {
-   z-index: -1;
-    padding-top: 100px;
-    width: 100%;
-}
-
-#photo {
-    z-index: 2;
-    top: -250px;
-    flex: 1 1;
-}
 
 #avatar {    
     width: 250px;
+    border-radius: 10px;
+    z-index: 0;
+    justify-content: right;
+   align-self: flex-end;
 }
 
 /*format lower portion of document*/
@@ -104,11 +96,22 @@ nav > a{
     font-weight: bolder;
 }
 
-main {
+#photo {
+    border-radius: 10px;
+    border: 10px solid var(--bgcolour);
+background-color: var(--bgcolour);
 
+}
+
+img {
+    border-radius: 10px;
+}
+
+main {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap; 
+    justify-content: flex-end;
     }
 
     /*Style text in intro beneath image*/
@@ -116,12 +119,19 @@ main {
     .intro {
         font-size: 22px;
         font-style: oblique;
+        background-image: url(../images/bgrd.PNG);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 100px;
+
     }
 
     main > p {
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.61);
 }
 
 .sidebar {
@@ -134,8 +144,6 @@ main {
     border-top: 10px solid white;
     text-align: right;
 }
-
-
 
 /*Format unordered list and list elements in About Me section*/
 ul {
@@ -159,6 +167,7 @@ div {
     flex-wrap: wrap;
     align-items: center;
 }
+
 
 #projectimage1 {
       width: 350px;
