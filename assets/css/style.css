@@ -47,17 +47,15 @@ h1 {
 
 .angle {
     position: absolute;
-    background-color: black;
+    background-color: var(--bgcolour);
     color: var(--bgcolour);
-    left: 24.1%;
+    left: 23.5%;
     transform: rotate(45deg);
     padding: 15px;
     width: 65px;
     height: 35px;
     top: 10px;
     float: right;
-
-
 }
 
 /*Format anchor links*/
@@ -97,7 +95,7 @@ nav > a{
 /*format lower portion of document*/
 
 .sidetitle{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bolder;
     align-self: center;
 
@@ -128,7 +126,13 @@ border-top: 10px solid white;
  text-align: right;
 }
 
+ul {
+    text-align: left;
+}
 
+li:nth-child(odd) {
+    background: rgb(96, 108, 121);
+}
 
 body {
     background-color: lightslategray;
@@ -162,39 +166,12 @@ main > p {
     padding-bottom: 15px;
 }
 
-/* Cards are split into two columns at 992px or smaller 
-@media (max-width: 1030px) {
-    main {
-        flex-direction: column;
-        width: 100%;
-    }
-    main > section {
-      width: 100%;
-    }
-    .sidebar {
-    width: 100%;
-    }
-    .rightside {
-        width: 100%;
-        justify-content: center;
-    }
-*/
+.intro {
+    font-size: 22px;
+    font-style: oblique;
+}
 
-/*Cards are split into two columns at 992px or smaller */
-@media (max-width: 1030px) {
-    h1 {
-           font-size: 3vw;
-    }
 
-  }
-
-  /*Cards are split into two columns at 992px or smaller */
-@media (max-width: 768px) {
-
-    .angle {
-        display: none;
-    }
-  }
 
   #project {
       width: 250px;
@@ -229,3 +206,50 @@ main > p {
     border-top: 10px solid white;
     width: 100%;
 }
+
+/*Cards are split into two columns at 992px or smaller 
+@media (max-width: 1030px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+    main > section {
+      width: 100%;
+    }
+    .sidebar {
+    width: 100%;
+    }
+    .rightside {
+        width: 100%;
+        justify-content: center;
+    }
+*/
+
+  /*Hide angle once header shrinks with screen size */
+  @media (max-width: 1240px) {
+
+    .angle {
+        display: none;
+    }
+  }
+ 
+/*Cards are split into two columns at 992px or smaller   */
+@media (max-width: 1030px) {
+    h1 {
+           font-size: 3vw;
+    }
+
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    } 
+
+    .sidebar {
+        text-align: center;
+        
+    }
+
+  }
+
+
