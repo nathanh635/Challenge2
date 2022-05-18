@@ -22,3 +22,4 @@ Notes:
 
 -currently I haven't actually made the Resume link lead anywhere. However, the email contact, Github, and other project links are both functional.
 -it doesn't look quite as fancy as I want it to, but it's functional and the page sizes appropriately now, so thats a victory!
+-There are a few extra lines in there related to things i tried and didn't work out, and eventually gave up.

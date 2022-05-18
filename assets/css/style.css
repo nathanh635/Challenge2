@@ -14,7 +14,10 @@
 /*Set body formatting*/
 
 body {
-    background-color: var(--accent);
+    background-image: url(../images/bgrd.PNG);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -80,13 +83,18 @@ nav > a {
 
 /*set formatting for background image up top*/
 
-
 #avatar {    
     width: 250px;
     border-radius: 10px;
     z-index: 0;
     justify-content: right;
    align-self: flex-end;
+}
+
+#photo {
+    border-radius: 10px;
+    border: 10px solid var(--bgcolour);
+background-color: var(--bgcolour);
 }
 
 /*format lower portion of document*/
@@ -96,35 +104,26 @@ nav > a {
     font-weight: bolder;
 }
 
-#photo {
-    border-radius: 10px;
-    border: 10px solid var(--bgcolour);
-background-color: var(--bgcolour);
-
-}
-
-img {
-    border-radius: 10px;
-}
-
 main {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    justify-content: flex-end;
-    }
+}
+
+main > div {
+    display: inline-flex;
+    flex-direction: row;
+align-content: space-between;
+
+}
 
     /*Style text in intro beneath image*/
 
     .intro {
         font-size: 22px;
         font-style: oblique;
-        background-image: url(../images/bgrd.PNG);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+    
         padding-top: 100px;
-
     }
 
     main > p {
@@ -158,6 +157,7 @@ li:nth-child(odd) {
     width: 80%;
     flex: 1 1 70%;
     border-top: 10px solid white;
+    background-color: var(--accent);
 }
 
 /*Format size of link to project page*/
@@ -168,6 +168,9 @@ div {
     align-items: center;
 }
 
+figcaption {
+    border-radius:  10px;
+}
 
 #projectimage1 {
       width: 350px;
@@ -223,12 +226,17 @@ div {
 /*Format footer*/
   
  footer {
-    color: white;
+    color: black;
     font-size: 14px;
+    font-style: oblique;
     text-align: center;
-    background-color: lightslategray;
     border-top: 10px solid white;
     width: 100%;
+}
+
+h4 {
+    background-color: rgba(255, 255, 255, 0.61);
+    width: auto;
 }
 
 /*Page displays as one column at 768px or smaller   */
