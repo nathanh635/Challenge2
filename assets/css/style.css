@@ -180,6 +180,10 @@ figcaption {
         width: 250px;
       } 
 
+      #projectimage3 {
+        width: 350px;
+      } 
+
     /*added padding below resume link in main body*/
 #resume {
     padding-bottom: 15px;
